@@ -1,0 +1,137 @@
+
+/* header */
+nav.navbar{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#secondNavbar{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#secondNavbarNavDropdown{
+    padding-left: 11.5%;
+    font-weight: bold;
+}
+
+/* main */
+.main-footer-nav{
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+/* carousel */
+#carouselExampleInterval{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 19%;
+    height: 80%;
+    width: 80%;
+}
+.carousel-inner{
+    border-radius: 20px;
+}
+/* footer */
+#footer{
+    background-color: #e6e8f4;
+    
+}
+#secondfooter{
+    padding-left: 9%;
+}
+#payment{
+    float: left;
+    width: 50%;
+    margin-left: 0;
+}
+#social{
+    float: right;
+    width: 50%;
+    padding-left: 19%;
+
+}
+
+/* Signin/login form */
+#mainSignin{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 38%;
+        #signinForm{
+            display: block;
+            h2{
+                margin-bottom: 25px;
+            }
+        }
+        #loginForm{
+            display: none;
+            h2{
+                margin-bottom: 25px;
+            }
+        }
+        #ahaDiv{
+            display: block;
+        }
+}
+
+/* Help Guide */
+.helpguide{
+    text-align: center;
+    &:hover{
+        color: yellowgreen;
+    }
+}
+
+/* Help selector */
+#selectHelp{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+}
+
+/* Alert sign in */
+#signinAlert{
+    margin-top: 5%;
+}
+
+/* Evidenziazione */
+.highlight{
+    align-items: center;
+    background-color: yellow;
+    font-weight: bold;
+}
+/* Map */
+
+#mapcontainer {
+    width: 100%;
+    text-align: center;
+    padding-top: 3%;
+    h2{
+        color:#0DCAF0;
+        margin-bottom: 3%;
+    }
+    #map{
+        height: 400px; 
+        width: 100%; 
+        background-color: lightgray;
+    }
+}
+#productContainer{
+    h2{
+        text-align: center;
+        color:#0DCAF0;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+}
+
+
