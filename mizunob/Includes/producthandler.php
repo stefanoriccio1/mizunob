@@ -4,7 +4,7 @@ try {
     require_once "dbh.inc.php";
 
     // fetching products from the database
-    $query = "SELECT p.name, p.size, p.price, p.img, c.description AS color 
+    $query = "SELECT p.id, p.name, p.size, p.price, p.img, c.description AS color 
               FROM products AS p
               LEFT JOIN colors AS c ON p.color_id = c.id";
     // preparing and executing the query via pod

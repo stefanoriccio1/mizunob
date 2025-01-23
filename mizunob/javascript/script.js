@@ -7,15 +7,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-  //toast activator
-  // document.getElementById("toastbtn").onclick = function() {
-  //     var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-  //     var toastList = toastElList.map(function(toastEl) {
-  //         return new bootstrap.Toast(toastEl)
-  //     })
-  //     toastList.forEach(toast => toast.show())
-  // }
-
   //offcanvas
   var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
   var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
@@ -77,6 +68,61 @@ document.addEventListener('DOMContentLoaded', function () {
       .bindPopup('Viale Risorgimento 20, Beinasco')
       .openPopup();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('add-filter').addEventListener('click', function() {
+
+    const filterContainer = document.getElementById('filter-container');
+    if (!filterContainer) {
+      console.error('Elemento filter-container non trovato');
+      return;
+    }
+
+    const newRow = document.createElement('div');
+    newRow.className = 'row mb-3';
+    newRow.innerHTML = `
+      <div class="col-md-6">
+      <select class="form-select" placeholder="SELEZIONA">
+          <option value="" disabled selected>SELEZIONA</option>
+          <option>Numero Fattura</option>
+          <option>Numero Ordine</option>
+          <option>Numero Bolla</option>
+          <option>Codice Prodotto</option>
+          <option>Data di consegna richiesta</option>
+      </select>
+      <small class="form-text text-muted">Seleziona i criteri di ricerca</small>
+      </div>
+      <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Inserisci valore">
+      </div>
+    `;
+    filterContainer.appendChild(newRow);
+  });
+
+  document.getElementById('reset-filters').addEventListener('click', function() {
+
+    const filterContainer = document.getElementById('filter-container');
+    if (!filterContainer) {
+      console.error('Elemento filter-container non trovato');
+      return;
+    }
+
+    // removing all the rows added by the + button
+    while (filterContainer.children.length > 2) {
+      filterContainer.removeChild(filterContainer.lastChild);
+    }
+
+    // resetting filters and form values
+    const selects = filterContainer.querySelectorAll('select');
+    selects.forEach(select => select.selectedIndex = 0);
+
+    const inputs = filterContainer.querySelectorAll('input');
+    inputs.forEach(input => input.value = '');
+  });
+});
+
+
+
 
 
 

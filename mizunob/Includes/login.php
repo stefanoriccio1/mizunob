@@ -22,6 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 // checking if the password is correct
                 if (password_verify($password, $user['pwd'])) {
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['username'] = $user['email'];
                     $username = $user['email'];
                     header("Location: ../html/homepage.php?login=success&username=$username");
                     exit();

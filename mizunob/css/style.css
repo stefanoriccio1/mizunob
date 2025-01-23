@@ -3,20 +3,33 @@
 nav.navbar{
     padding-left: 3%;
     padding-right: 3%;
+    #loggedUser{
+        margin-right: 20% !important;
+    }
 }
 
-#secondNavbar{
+#secondNavbar {
     justify-content: center;
     text-align: center;
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-#secondNavbarNavDropdown{
+  }
+  
+  #secondNavbarNavDropdown {
     padding-left: 11.5%;
     font-weight: bold;
-}
+  }
+  
+  .navbarBrand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .secondNavbarIcon {
+    display: flex;
+    justify-content: flex-end;
+  }
 
 /* main */
 .main-footer-nav{
@@ -133,5 +146,16 @@ nav.navbar{
         margin-top: 3%;
     }
 }
+
+/* returns */
+#filter-container {
+    border: 1px solid #d3d3d3; /* Bordi grigio chiaro */
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .form-container {
+    margin-bottom: 5%;
+  }
 
 

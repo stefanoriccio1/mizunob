@@ -24,14 +24,14 @@
         <div class="row">
             <?php
             if (!empty($products)) {
-                // for each product, printing a a card with all the needed details
+                // for each product, printing a card with all the needed details
                 foreach ($products as $row) {
-                    echo '<div class="col-md-3">';
+                    echo '<div class="col-md-3" name= ' .$row["id"] .'>';
                     echo '<a href="#">';
                     echo '<div class="card mb-4 productCard position-relative">';
                     echo '<div class="position-absolute top-0 start-0 m-2">';
-                    echo '<a href="#" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Wishlist"><i class="fa-solid fa-heart"></i></button>';
-                    echo '<a href="#" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    echo '<a href="#" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Wishlist"><i class="fa-solid fa-heart"></i></button>';
+                    echo '<a href="#" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></a>';
                     echo '</div>';
                     echo '<img src="http://localhost/mizunob/img/products/' . basename($row["img"]) . '" class="card-img-top" alt="' . $row["name"] . '">';
                     echo '<div class="card-body">';

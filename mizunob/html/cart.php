@@ -15,7 +15,11 @@
     <!-- Header -->
     <?php include 'header.php'; ?>
     <main>
- 
+        <div class ="container">
+            <h2 class="text-center">
+                Your cart is empty
+            </h2>
+        </div>
     </main>
     <!-- Footer -->
     <?php include 'footer.php'; ?>
