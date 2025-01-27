@@ -119,6 +119,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputs = filterContainer.querySelectorAll('input');
     inputs.forEach(input => input.value = '');
   });
+
+});
+
+
+// sign in alert successful
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide the alert after 4 seconds
+  setTimeout(function() {
+      var alert = document.getElementById('signinAlert');
+      if (alert) {
+          var bsAlert = new bootstrap.Alert(alert);
+          bsAlert.close();
+      }
+  }, 4000);
 });
 
 

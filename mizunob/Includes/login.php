@@ -24,20 +24,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (password_verify($password, $user['pwd'])) {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $user['email'];
-                    $username = $user['email'];
+                    $_SESSION['userId'] = $user['id'];
+                    // $username = $user['email'];
+                    // $userId = $user['id'];
                     header("Location: ../html/homepage.php?login=success&username=$username");
                     exit();
                 } else {
-                    echo "<script>alert('password errata');</script>";
+                    echo "<script>alert('wrong password');</script>";
                 }
             } else {
-                echo "<script>alert('Utente non trovato');</script>";
+                echo "<script>alert('USer not found');</script>";
             }
         } catch (PDOException $e) {
             echo "<script>alert('Errore: " . $e->getMessage() . "');</script>";
         }
     } else {
-        echo "<script>alert('Email o password non impostati');</script>";
+        echo "<script>alert('User or email not setted');</script>";
     }
 }
 ?>

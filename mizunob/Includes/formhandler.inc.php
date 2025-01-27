@@ -35,8 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo = null;
         $stmt = null;
 
+        $_SESSION['signin_success'] = true;
+
         // redirecting to the signin page
         header("Location: ../html/signin.php");
+        // print_r($_SESSION);
         
         // Terminating the script
         die();

@@ -14,6 +14,16 @@
 <body>
     <!-- Header -->
     <?php include 'header.php'; ?>
+    <?php
+    if (isset($_SESSION['signin_success']) && $_SESSION['signin_success']) {
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert" id="signinAlert">
+                <strong>Well done!</strong> You have successfully signed in!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>';
+        // Unset the session variable to prevent the alert from showing again on page refresh
+        unset($_SESSION['signin_success']);
+    }
+    ?>
     <main id="mainSignin">
         <!-- form sign in -->
         <form id="signinForm" class="row col-4" action= "../includes/formhandler.inc.php" method="post">

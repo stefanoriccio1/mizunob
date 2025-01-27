@@ -30,6 +30,7 @@
             </ul>
           </li>
         </ul>
+        <!-- Welcoming popup (if user is logged in) -->
         <div class="d-flex" id="loggedUser" style="display: <?php echo $isLoggedIn ? 'flex' : 'none'; ?> !important; margin-right: 5px; align-items: center;">
           <span style="margin-right: 5px">Welcome, <?php echo htmlspecialchars($userName); ?>!</span>
           <form action="../includes/logout.inc.php" method="post">
@@ -95,9 +96,9 @@
             </a>
           </li>
           <li class="list-group-item" style="display: <?php echo $isLoggedIn ? 'block' : 'none'; ?>">
-            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="My Wishlist">
+            <a href="wishlist.php" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="My Wishlist">
               <i class="fa-solid fa-heart"></i>
-            </button>
+            </a>
           </li>
           <li class="list-group-item" style="display: <?php echo $isLoggedIn ? 'block' : 'none'; ?>">
             <a href="cart.php" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="My Cart">

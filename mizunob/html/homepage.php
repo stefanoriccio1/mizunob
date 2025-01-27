@@ -14,7 +14,6 @@
 <body>
     <!-- Header -->
     <?php include 'header.php'; ?>
-
     <!-- Main -->
     <main>
         <!-- Carousel -->
