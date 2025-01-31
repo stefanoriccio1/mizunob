@@ -1,14 +1,14 @@
 <?php
-// start the session only if is not startedalready
+// Start the session only if is not startedalready
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// cheking if the user is logged in
+// Cheking if the user is logged in
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    // end the session
+    // End the session
     session_destroy();
-    // homepage redirect
+    // Homepage redirect
     header("Location: ../html/homepage.php");
     exit();
 } else {

@@ -48,7 +48,7 @@
                 </ul>
           </div>
       </div>
-      <!-- social -->
+      <!-- Social -->
        <div class="main-footer-nav row" id="secondfooter">
           <ul class="list-group list-group-horizontal" id="payment">
               <li class="list-group-item">

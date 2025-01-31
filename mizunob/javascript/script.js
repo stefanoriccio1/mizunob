@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-  //tooltip
+  // Tooltip
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-  // popover activator
+  // Popover activator
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-  //offcanvas
+  //Offcanvas
   var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
   var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
       return new bootstrap.Offcanvas(offcanvasEl)
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  //attivare alert di signin + clear form
+  //Attivare alert di signin + clear form
   document.getElementById('signinbut').addEventListener('click', function() {
     document.getElementById('signinAlert').style.display = 'block';
     document.getElementById("mainSignin").reset();
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 });
 
-// mappa
+// Map
 document.addEventListener('DOMContentLoaded', function () {
   var map = L.map('map').setView([45.0242, 7.5795], 13); // Coordinate di Beinasco
 
@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // removing all the rows added by the + button
+    // Removing all the rows added by the + button
     while (filterContainer.children.length > 2) {
       filterContainer.removeChild(filterContainer.lastChild);
     }
 
-    // resetting filters and form values
+    // Resetting filters and form values
     const selects = filterContainer.querySelectorAll('select');
     selects.forEach(select => select.selectedIndex = 0);
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// sign in alert successful
+// Sign in alert successful
 document.addEventListener('DOMContentLoaded', function() {
   // Hide the alert after 4 seconds
   setTimeout(function() {

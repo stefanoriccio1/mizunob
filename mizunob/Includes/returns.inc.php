@@ -1,6 +1,9 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 try {
-    // db connection
+    // DB connection
     require_once "dbh.inc.php";
 
 } catch (PDOException $e) {

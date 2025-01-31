@@ -26,7 +26,7 @@
     ?>
     <main id="mainSignin">
         <!-- form sign in -->
-        <form id="signinForm" class="row col-4" action= "../includes/formhandler.inc.php" method="post">
+        <form id="signinForm" class="row col-4" action="../includes/signin.inc.php" method="post" enctype="multipart/form-data">
             <h2 style="color: #00138a;">Insert your data</h2>
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" name= "email" placeholder="name@example.com">
@@ -55,6 +55,10 @@
             <div class="form-floating mb-3">
                 <input type="vat" class="form-control" id="floatingPassword" name= "VAT" placeholder="VAT">
                 <label for="floatingPassword">VAT</label>
+            </div>
+            <div class="mb-3">
+                <label for="profile_picture" class="form-label">Profile Picture</label>
+                <input class="form-control" type="file" id="profile_picture" name="profile_picture">
             </div>
             <div>
                 <button type="submit" class="btn btn-outline-primary" id="signinbut">Sign In</button>

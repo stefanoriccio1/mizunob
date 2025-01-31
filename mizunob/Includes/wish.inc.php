@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = null;
         $pdo = null;
         header("Location: ../html/shoes.php");
+        exit();
     }
 }
 // Remove a product from wishlist
@@ -55,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "DELETE FROM wishlists WHERE user_id = :userid AND product_id = :product_id";
             $stmt = $pdo->prepare($sql);
 
-            // binding parameters
+            // Binding parameters
             $stmt->bindParam(':userid', $userid);
             $stmt->bindParam(':product_id', $product_id);
 
@@ -64,10 +65,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Errore: " . $e->getMessage();
         }
 
-        // closing connection
+        // Closing connection
         $stmt = null;
         $pdo = null;
         header("Location: ../html/wishlist.php");
+        exit();
     }
 }
 

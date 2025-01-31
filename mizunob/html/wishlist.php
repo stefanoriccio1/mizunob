@@ -33,7 +33,10 @@
                     echo '<input type="hidden" name="remove_product_id" value="' . $product["id"] . '">';
                     echo '<button type="submit" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove from Wishlist"><i class="fa-solid fa-heart-broken"></i></button>';
                     echo '</form>';
-                    echo '<a href="#" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    echo '<form method="POST" action="../includes/cart.inc.php" style="display:inline;">';
+                    echo '<input type="hidden" name="cart_product_id" value="' . $product["id"] . '">';
+                    echo '<button  type="submit" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>';
+                    echo '</form>';
                     echo '</div>';
                     echo '<img src="http://localhost/mizunob/img/products/' . basename($product["img"]) . '" class="card-img-top" alt="' . $product["name"] . '">';
                     echo '<div class="card-body">';

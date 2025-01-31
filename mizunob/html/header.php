@@ -24,7 +24,6 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../html/help.php">Help Guide</a></li>
               <li><a class="dropdown-item" href="returns.php">Returns</a></li>
-              <li><a class="dropdown-item" href="#">Our Blog</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="contacts.php">Contacts</a></li>
             </ul>
@@ -44,7 +43,7 @@
       </div>
     </div>
   </nav>
-  <!-- second Navbar -->
+  <!-- Second Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" id="secondNavbar">
     <div class="container-fluid">
       <div class="navbarBrand col-3 d-flex align-items-center">

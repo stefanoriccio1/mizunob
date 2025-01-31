@@ -1,5 +1,5 @@
 <?php
-// connection used to connect to the database
+// Connection used to connect to the database
 $dsn = "mysql:host=localhost;dbname=mizuno";
 $dbusername = "root";
 $dbpassword = "";

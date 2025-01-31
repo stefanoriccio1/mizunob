@@ -1,5 +1,5 @@
 
-/* header */
+/* Header */
 nav.navbar{
     padding-left: 3%;
     padding-right: 3%;
@@ -31,14 +31,14 @@ nav.navbar{
     justify-content: flex-end;
   }
 
-/* main */
+/* Main */
 .main-footer-nav{
     justify-content: center;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
-/* carousel */
+/* Carousel */
 #carouselExampleInterval{
     padding-top: 5%;
     padding-bottom: 5%;
@@ -49,7 +49,7 @@ nav.navbar{
 .carousel-inner{
     border-radius: 20px;
 }
-/* footer */
+/* Footer */
 #footer{
     background-color: #e6e8f4;
     
@@ -147,7 +147,7 @@ nav.navbar{
     }
 }
 
-/* returns */
+/* Returns */
 #filter-container {
     border: 1px solid #d3d3d3; /* Bordi grigio chiaro */
     padding: 15px;

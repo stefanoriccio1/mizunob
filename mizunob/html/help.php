@@ -24,12 +24,11 @@
                 <option>I need a refund</option>
                 <option>I want to delete my account</option>
               </select>
-                <!-- Pulsante per aprire la modale -->
+                <!-- Modal's button -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 5%;">
                     More Questions? Click on me!
                 </button>
-
-                <!-- La Modale -->
+                <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
