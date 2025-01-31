@@ -80,7 +80,8 @@ function getWishlistProducts($userid) {
         $sql = "SELECT p.id, p.name, p.size, p.price, p.img, c.description AS color 
                 FROM products AS p
                 INNER JOIN wishlists AS w ON p.id = w.product_id 
-                INNER JOIN colors AS c ON p.color_id = c.id
+                LEFT JOIN product_colors AS pc ON p.id = pc.product_id
+                INNER JOIN colors AS c ON pc.color_id = c.id
                 WHERE w.user_id = :userid";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':userid', $userid);

@@ -89,6 +89,9 @@
                 <strong>Well done!</strong> You have successfully logged in!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>  -->
+            <div style="margin-top: 5%;" id="fpDiv">
+                <a id="forgottonePassword" href="recover_pwd.php">Click here if you forgot your password</a>
+            </div>
         </form>
     </main>
     <!-- Footer -->
