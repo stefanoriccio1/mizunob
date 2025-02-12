@@ -77,11 +77,12 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Customer News
+              Mizuno  News
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">New Arrivals</a></li>
               <li><a class="dropdown-item" href="#">Sport News</a></li>
+              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Mizuno News</a></li>
             </ul>
           </li>

@@ -20,6 +20,7 @@
     ?>
     <!-- Main -->
     <main>
+        
         <div class ="container" id="cartContainer">
             <h2 class="text-center">Your cart</h2>
             <div class="row">
@@ -35,6 +36,7 @@
                     echo '</form>';
                     echo '<form method="POST" action="../includes/cart.inc.php" style="display:inline;">';
                     echo '<input type="hidden" name="remove_product_cart" value="' . $product["id"] . '">';
+                    echo '<input type="hidden" name="remove_product_color" value="' . $product["color"] . '">';
                     echo '<button type="submit" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove from Cart"><i class="fa-solid fa-trash"></i></button>';
                     echo '</form>';
                     echo '</div>';

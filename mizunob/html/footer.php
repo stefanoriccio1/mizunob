@@ -40,7 +40,7 @@
           </div>
           <div class="footer-nav-col col-6 col-md-2">
               <ul class="list-group">
-                  <li class="list-group-item"><h4>Customer Service</h4></li>
+                  <li class="list-group-item"><h4>Join Us!</h4></li>
                   <li class="list-group-item">Shoes</li>
                   <li class="list-group-item">Clothing</li>
                   <li class="list-group-item">Cap</li>

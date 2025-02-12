@@ -16,26 +16,26 @@
     <?php include 'header.php'; ?>
     <!-- Main -->
     <main>
-    <div class="container mt-5" style="margin-bottom: 4%">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Password Recovery</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="../includes/recover_password.include.php" method="post">
-                            <div class="form-group">
-                                <label for="rec_email">Email:</label>
-                                <input type="rec_email" class="form-control" id="rec_email" name="rec_email" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block" style="margin-top:5%">Recover Password</button>
-                        </form>
+        <div class="container mt-5" style="margin-bottom: 4%">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Password Recovery</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="../includes/recover_password.include.php" method="post">
+                                <div class="form-group">
+                                    <label for="rec_email">Email:</label>
+                                    <input type="rec_email" class="form-control" id="rec_email" name="rec_email" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block" style="margin-top:5%">Recover Password</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </main>
     <!-- Footer -->
     <?php include 'footer.php'; ?>

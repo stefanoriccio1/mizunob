@@ -39,13 +39,7 @@ nav.navbar{
     padding-bottom: 5%;
 }
 /* Carousel */
-#carouselExampleInterval{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 19%;
-    height: 80%;
-    width: 80%;
-}
+
 .carousel-inner{
     border-radius: 20px;
 }
@@ -98,7 +92,7 @@ nav.navbar{
 .helpguide{
     text-align: center;
     &:hover{
-        color: yellowgreen;
+        color: #0d6efd;
     }
 }
 

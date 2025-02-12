@@ -1,3 +1,6 @@
+<?php
+$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +28,32 @@
             <?php
             if (!empty($products)) {
                 foreach ($products as $product) {
-                    echo '<div class="col-md-3" name="' . $product["id"] . '">';
-                    echo '<div class="card mb-4 productCard position-relative">';
-                    echo '<div class="position-absolute top-0 start-0 m-2">';
-                    echo '<form method="POST" action="../includes/wish.inc.php" style="display:inline;">';
-                    echo '<input type="hidden" name="add_product_id" value="' . $product["id"] . '">';
-                    echo '<button type="submit" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Wishlist"><i class="fa-solid fa-heart"></i></button>';
-                    echo '</form>';
-                    echo '<form method="POST" action="../includes/cart.inc.php" style="display:inline;">';
-                    echo '<input type="hidden" name="cart_product_id" value="' . $product["id"] . '">';
-                    echo '<button  type="submit" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>';
-                    echo '</form>';
-                    echo '</div>';
-                    echo '<img src="http://localhost/mizunob/img/products/' . basename($product["img"]) . '" class="card-img-top" alt="' . $product["name"] . '">';
-                    echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $product["name"] . '</h5>';
-                    echo '<p class="card-text">Colore: ' . $product["color"] . '</p>';
-                    echo '<p class="card-text">Taglia: ' . $product["size"] . '</p>';
-                    echo '<p class="card-text">Prezzo: €' . $product["price"] . '</p>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
+                    echo '<div class="col-md-3" name="' . $product["id"] . '">
+                            <div class="card mb-4 productCard position-relative">
+                                <div class="position-absolute top-0 start-0 m-2">';
+                    if ($isLoggedIn) {
+                        echo '<form method="POST" action="../includes/wish.inc.php" style="display:inline;">
+                                <input type="hidden" name="add_product_id" value="' . $product["id"] . '">
+                                <input type="hidden" name="add_product_color" value="' . $product["color"] . '">
+                                <button type="submit" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Wishlist"><i class="fa-solid fa-heart"></i></button>
+                            </form>
+                            <form method="POST" action="../includes/cart.inc.php" style="display:inline;">
+                                <input type="hidden" name="cart_product_id" value="' . $product["id"] . '">
+                                <input type="hidden" name="cart_product_color" value="' . $product["color"] . '">
+                                <button type="submit" class="btn btn-secondary" style="margin-right: 5px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </form>';
+                    }
+                    echo '</div>
+                            <img src="http://localhost/mizunob/img/products/' . basename($product["img"]) . '" class="card-img-top" alt="' . $product["name"] . '">
+                            <div class="card-body">
+                                <h5 class="card-title">' . $product["name"] . '</h5>
+                                <p class="card-text">Colore: ' . $product["color"] . '</p>
+                                <p class="card-text">Taglia: ' . $product["size"] . '</p>
+                                <p class="card-text">Prezzo: €' . $product["price"] . '</p>
+                                <p class="card-text">Quantità: ' . $product["qty"] . '</p>
+                            </div>
+                        </div>
+                        </div>';
                 }
             } else {
                 echo '<p>Nessun prodotto trovato.</p>';

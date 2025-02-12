@@ -23,8 +23,52 @@
                 <option>I forgot my password</option>
                 <option>I need a refund</option>
                 <option>I want to delete my account</option>
-              </select>
-                <!-- Modal's button -->
+            </select>
+        </div>
+        <!-- Portal -->
+        <div class="container my-5">
+            <h1 class="text-center mb-4">Help Portal</h1>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Returns</h5>
+                            <p class="card-text">Find information on how to return your items.</p>
+                            <a href="returns.php" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Where is my order</h5>
+                            <p class="card-text">Track the status of your order.</p>
+                            <a href="#" class="btn btn-primary">Track Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Help</h5>
+                            <p class="card-text">Get general help and support.</p>
+                            <a href="#" class="btn btn-primary">Get Help</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Where to find us</h5>
+                            <p class="card-text">Find our store locations.</p>
+                            <a href="contacts.php" class="btn btn-primary">Find Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal's button -->
+         <div class="container-fluid" style="text-align: center;">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 5%;">
                     More Questions? Click on me!
                 </button>
@@ -46,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-        </div>
+         </div>
     </main>
     <!-- Footer -->
     <?php include 'footer.php'; ?>
