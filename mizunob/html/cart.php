@@ -32,6 +32,7 @@
                     echo '<div class="position-absolute top-0 start-0 m-2">';
                     echo '<form method="POST" action="../includes/wish.inc.php" style="display:inline;">';
                     echo '<input type="hidden" name="add_product_id" value="' . $product["id"] . '">';
+                    echo '<input type="hidden" name="add_product_color" value="' . $product["color"] . '">';
                     echo '<button type="submit" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to Wishlist"><i class="fa-solid fa-heart"></i></button>';
                     echo '</form>';
                     echo '<form method="POST" action="../includes/cart.inc.php" style="display:inline;">';
