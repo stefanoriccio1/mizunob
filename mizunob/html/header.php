@@ -23,7 +23,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../html/help.php">Help Guide</a></li>
-              <li><a class="dropdown-item" href="returns.php">Returns</a></li>
+              <li><a class="dropdown-item" href="returns.php" style="display: <?php echo $isLoggedIn ? 'flex' : 'none'; ?>">Returns</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="contacts.php">Contacts</a></li>
             </ul>

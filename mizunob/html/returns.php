@@ -18,7 +18,7 @@
     <main>
         <h2 style= "text-align: center;color:#0DCAF0; margin-bottom: 3%; margin-top: 3%;">Cerca per</h2>
         <div class="container form-container">
-            <form id="filter-form" action="../includes/returns.inc.php" method="GET">
+            <form id="filter-form" action="../includes/returns.inc.php" method="POST">
                 <div id="filter-container">
                 <div class="row mb-3">
                     <div class="col-md-6">
