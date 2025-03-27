@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Web Service</title>
+    <script>
+        function sendGetRequest() {
+            const name = document.getElementById('name').value;
+            fetch(`http://localhost/mizunob/webserv/api.php?name=${name}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                });
+        }
+
+        function sendPostRequest() {
+            const name = document.getElementById('name').value;
+            fetch('http://localhost/mizunob/webserv/api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Test Web Service</h1>
+    <input type="text" id="name" placeholder="Inserisci il tuo nome">
+    <button onclick="sendGetRequest()">Invia GET</button>
+    <button onclick="sendPostRequest()">Invia POST</button>
+    <pre id="response"></pre>
+</body>
+</html>

@@ -29,28 +29,27 @@
                     <small class="form-text text-muted">Seleziona i criteri di ricerca</small>
                     </div>
                     <div class="col-md-6">
-                    <select class="form-select">
-                        <option>ULTIMI 24 MESI</option>
-                        <option>ULTIMI 18 MESI</option>
-                        <option>ULTIMI 12 MESI</option>
+                    <select class="form-select" name="date">
+                        <option value="24">ULTIMI 24 MESI</option>
+                        <option value ="18">ULTIMI 18 MESI</option>
+                        <option Value ="12">ULTIMI 12 MESI</option>
+                        <option Value ="6">ULTIMI 6 MESI</option>
                     </select>
                     <small class="form-text text-muted">Seleziona la data di fatturazione es. "ultimi 12 mesi"</small>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
-                    <select class="form-select" placeholder="SELEZIONA">
+                    <select class="form-select search-parameters" placeholder="SELEZIONA">
                         <option value="" disabled selected>SELEZIONA</option>
-                        <option>Numero Fattura</option>
-                        <option>Numero Ordine</option>
-                        <option>Numero Bolla</option>
-                        <option>Codice Prodotto</option>
-                        <option>Data di consegna richiesta</option>
+                        <option value="numero_fattura">Numero Fattura</option>
+                        <option value="numero_ordine">Numero Ordine</option>
+                        <option value="codice_prodotto">Codice Prodotto</option>
                     </select>
                     <small class="form-text text-muted">Seleziona i criteri di ricerca</small>
                     </div>
                     <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Inserisci valore">
+                    <input type="text" class="form-control" name="" placeholder="Inserisci valore">
                     </div>
                 </div>
                 </div>

@@ -33,7 +33,7 @@
                     <div class="card h-100 text-center">
                         <div class="card-body">
                             <h5 class="card-title">Returns</h5>
-                            <p class="card-text">Find information on how to return your items.</p>
+                            <p class="card-text">Find informations on how to return your items.</p>
                             <a href="returns.php" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>

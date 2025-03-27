@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<script>alert('wrong password');</script>";
                 }
             } else {
-                echo "<script>alert('USer not found');</script>";
+                echo "<script>alert('User not found');</script>";
             }
         } catch (PDOException $e) {
             echo "<script>alert('Errore: " . $e->getMessage() . "');</script>";

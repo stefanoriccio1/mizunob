@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
       .openPopup();
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('add-filter').addEventListener('click', function() {
-
     const filterContainer = document.getElementById('filter-container');
     if (!filterContainer) {
       console.error('Elemento filter-container non trovato');
@@ -82,25 +82,39 @@ document.addEventListener('DOMContentLoaded', function() {
     newRow.className = 'row mb-3';
     newRow.innerHTML = `
       <div class="col-md-6">
-      <select class="form-select" placeholder="SELEZIONA">
+      <select class="form-select search-parameters" placeholder="SELEZIONA">
           <option value="" disabled selected>SELEZIONA</option>
-          <option>Numero Fattura</option>
-          <option>Numero Ordine</option>
-          <option>Numero Bolla</option>
-          <option>Codice Prodotto</option>
-          <option>Data di consegna richiesta</option>
+          <option value="numero_fattura">Numero Fattura</option>
+          <option value="numero_ordine">Numero Ordine</option>
+          <option value="codice_prodotto">Codice Prodotto</option>
       </select>
       <small class="form-text text-muted">Seleziona i criteri di ricerca</small>
       </div>
       <div class="col-md-6">
-      <input type="text" class="form-control" placeholder="Inserisci valore">
+      <input type="text" class="form-control" name="" placeholder="Inserisci valore">
       </div>
     `;
     filterContainer.appendChild(newRow);
+
+    // Adding listener for new Select
+    newRow.querySelector('.search-parameters').addEventListener('change', function() {
+      var selectedOption = this.options[this.selectedIndex].value;
+      var inputField = this.parentElement.nextElementSibling.querySelector('input');
+      inputField.name = selectedOption;
+    });
   });
 
-  document.getElementById('reset-filters').addEventListener('click', function() {
+  // Adding listener for existing Select
+  document.querySelectorAll('.search-parameters').forEach(function(select) {
+    select.addEventListener('change', function() {
+      var selectedOption = this.options[this.selectedIndex].value;
+      var inputField = this.parentElement.nextElementSibling.querySelector('input');
+      inputField.name = selectedOption;
+    });
+  });
 
+  // Reset filters
+  document.getElementById('reset-filters').addEventListener('click', function() {
     const filterContainer = document.getElementById('filter-container');
     if (!filterContainer) {
       console.error('Elemento filter-container non trovato');
@@ -119,21 +133,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputs = filterContainer.querySelectorAll('input');
     inputs.forEach(input => input.value = '');
   });
-
 });
 
-
-// Sign in alert successful
-document.addEventListener('DOMContentLoaded', function() {
-  // Hide the alert after 4 seconds
+  // Sign in alert successful
   setTimeout(function() {
-      var alert = document.getElementById('signinAlert');
-      if (alert) {
-          var bsAlert = new bootstrap.Alert(alert);
-          bsAlert.close();
-      }
+    var alert = document.getElementById('signinAlert');
+    if (alert) {
+      var bsAlert = new bootstrap.Alert(alert);
+      bsAlert.close();
+    }
   }, 4000);
-});
 
 
 

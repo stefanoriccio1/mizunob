@@ -9,7 +9,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $lastName = $_POST["last_name"];
-    $pwd = password_hash($_POST["pwd"], PASSWORD_BCRYPT);
+    $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
     $email = $_POST["email"];
     $address = $_POST["ship_address"];
     $vat = $_POST["VAT"];
@@ -55,6 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // There was an error uploading your file
             }
         }
+    } else{
+
+        echo 'foto non caricata';
     }
 
     try {
